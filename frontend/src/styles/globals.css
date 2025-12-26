@@ -1,0 +1,232 @@
+@import "tailwindcss";
+
+:root {
+  /* ... giữ các màu cũ ... */
+  --cyan-aqua-1400: #014444;
+  --cyan-aqua-1800: #001e1e;
+
+  /* THÊM MỚI MÀU NÀY */
+  --cyan-aqua-1900: #001414;
+
+  /* ... */
+
+  --background: #001414;
+  --foreground: #000000;
+  --cyan-aqua-50: #73ffff;
+  --cyan-aqua-100: #29ffff;
+  --cyan-aqua-200: #03f2f2;
+  --cyan-aqua-500: #05c1c1;
+  --cyan-aqua-600: #05aeae;
+  --cyan-aqua-700: #049b9b;
+  --cyan-aqua-900: #037474;
+  --cyan-aqua-1400: #014444;
+  --cyan-aqua-1800: #001e1e;
+
+  --picton-blue-600: #0098cd;
+  --picton-blue-900: #00678d;
+  /* ------------------------ đăng ký, dăng nhập----------------------------- */
+  /* lr: login-register */
+  --text-lr: rgb(166, 166, 166);
+  --text1-lr: #FFB300;
+  --text2-lr: #05c1c1;
+  --hover-text2-lr: #73ffff70;
+  --text3-lr: #FFB300;
+  --hover-text3-lr: #73ffff70;
+  --bg-lr: linear-gradient(45deg, #00f59f37, #00d0ff62);
+  --hover-bg-lr: linear-gradient(45deg, #00384d 0%, #00658a 100%);
+
+  /* -------------------------------------------------------------- */
+  /*--------- public header-footer ------------*/
+  /* bg */
+  --bg-header-public: #001414;
+  --bg-footer-public: #003d55;
+  /* text */
+  --text-header-public: white;
+  --text-header1-public: #FFB300;
+  /* btn */
+  --bg-btn-header-public: linear-gradient(45deg, #00f59f37, #00d0ff62);
+  /* hover */
+  --bg-btn-hover-header-public: linear-gradient(45deg, #0098cd, #00678d);
+  /* boder */
+  --border-header-public: #73ffff70;
+  /* shadow */
+  --shadow-header-public: #05c1c1;
+  /* khác */
+  --after-header-bg1: #05aeae;
+  --after-header-bg2: linear-gradient(to bottom, #fdc197, #bde6fa);
+
+  /* ------------------------------------------------- */
+  --text-gray: #94a3b8;
+  /* ------------------- màu bg public home ----------------------*/
+  /* bg */
+  --bg-public: radial-gradient(circle at 50% 0%, #014444, #001414 80%);
+
+  --bg1-public: linear-gradient(135deg, #00678d 0%, #0098cd 100%);
+  /* ------------------------------------------------------------------ */
+
+  /* -------------------------------mau animation-------------------------------------------- */
+
+  --bg1-animation: conic-gradient(from 180deg,
+
+      /* --- NỬA TRÊN --- */
+      transparent 0%,
+
+      /* Giữ trong suốt thật lâu để tạo khoảng trống */
+      transparent 45%,
+      /* Đuôi: Màu hồng bắt đầu hiện ra ở đây */
+      #00ffff 50%,
+      /* Đầu: Chuyển sang màu xanh rực rỡ nhất */
+      transparent 50%,
+      /* CẮT BỤP: Chuyển ngay về trong suốt (tạo cạnh sắc cho đầu mũi) */
+
+      /* --- NỬA DƯỚI --- */
+
+      /* Giữ trong suốt tiếp... */
+      transparent 95%,
+      /* Đuôi: Màu xanh bắt đầu hiện ra (Ngược lại với ở trên) */
+      #ff00bb 100%
+      /* Đầu: Chuyển sang màu hồng rực rỡ nhất */
+    );
+  /* ---------------------------------------------------------------------------------------- */
+
+  /* --- Designer's Choice (Màu bổ sung) --- */
+  --text-white: #ffffff;
+  /* Dùng trắng làm text chính */
+  --text-dim: #e4f3ff;
+  /* Dùng picton-50 làm text mờ */
+
+  /* Cam san hô - Tương phản mạnh với xanh */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  /* Nền kính mờ nhẹ */
+  --glass-border: rgba(255, 255, 255, 0.2);
+  /* Viền kính mờ */
+
+  /* màu btn tùy chọn */
+
+  --btn-bg1: #00E676;
+  --btn-bg2: #FF7E67;
+
+  --btn-gradient1: linear-gradient(45deg, #FF0080, #7928CA);
+  --btn-gradient2: linear-gradient(45deg, #00F5A0, #00D2FF);
+  --btn-gradient3: linear-gradient(45deg, #FFB300, #FF6F00);
+  --btn-gradient4: linear-gradient(to bottom right, #B6FFFA 0%, #49c3f0 25%, #599bff 50%, #3e5bfe 100%);
+  /* Option 3: Golden Luxury (Sang trọng, Cao cấp) */
+  --btn-gold: #FFB300;
+
+  /* Option 4: Minimalist White (Tối giản, Sạch sẽ) */
+  --btn-white: #FFFFFF;
+  /* màu của list item */
+  --bg-item1: #005f82;
+  --boder-item1: #0078a3;
+  --box-shadow-item1: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+  /* after-bg */
+  --after-bg1: #05aeae;
+
+
+
+  /* --------------------------------mẫu 2 nav---------------------------------- */
+  --bg-nav2: linear-gradient(to right, #0a5e56 0%, #2abfb4 100%);
+  --bg-before-nav2: linear-gradient(to right, #0a5e56 0%, #2b9794 100%);
+  --shadow-nav2: 0 0 15px 0px #2abfb5b1;
+  /* ------------------------------------------------------------------------------ */
+  /* -----------------------------------Mẫu div------------------------------------------- */
+  --bg1-div: linear-gradient(to bottom, #08353a, #053539);
+  --bg4-div: #2b9794;
+  --shadow-mau1-div: 2px 2px 15px 0px #b8b8b8b1;
+  --bg2-div:#031b1d;
+  --bg3-div:radial-gradient(circle at 50% 0%, #014444, #001414 80%);
+  /* ------------------------------------------------------------------------------ */
+
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  /* ------------------------ đăng ký, dăng nhập----------------------------- */
+  /* lr: login-register */
+  --color-text-lr: var(--text-lr);
+  --color-text1-lr: var(--text1-lr);
+  --color-text2-lr: var(--text2-lr);
+  --color-hover-text2-lr: var(--hover-text2-lr);
+  --color-text3-lr: var(--text3-lr); 
+  --color-hover-text3-lr: var(--hover-text3-lr);
+  --background-image-bg-lr: var(--bg-lr);
+  --background-image-hover-bg-lr: var(--hover-bg-lr);
+  /* -------------------------------------------------------------- */
+
+  /*--------- public header-footer ------------*/
+  /* bg */
+  --color-bg-header-public: var(--bg-header-public);
+  --color-bg-footer-public: var(--bg-footer-public);
+  /* text */
+  --color-text-header-public: var(--text-header-public);
+  --color-text-header1-public: var(--text-header1-public);
+  /* btn */
+  --background-image-bg-btn-header-public: var(--bg-btn-header-public);
+  /* horver */
+  --background-image-bg-hover-btn-header-public: var(--bg-btn-hover-header-public);
+
+  /* border */
+  --color-border-header-public: var(--border-header-public);
+  /* shadow */
+  --color-shadow-header-public: var(--shadow-header-public);
+  /* khác */
+  --color-after-header-public: var(--after-header-bg1);
+  --background-image-after-header2-public: var(--after-header-bg2);
+  /* ------------------------------------------------- */
+
+  /* -------------------------------------------màu bg public home ------------------------------------*/
+  --background-image-bg-public: var(--bg-public);
+  /* ----------------------------------------------------------------------------------- */
+  /* -------------------------------------------màu animation----------------------------------------- */
+  --background-image-bg1-animation: var(--bg1-animation);
+  --animate-xoay-tron: xoay 8s linear infinite;
+
+  /* ------------------------------mẫu 2 nav------------------------------------------ */
+  --background-image-bg-nav2: var(--bg-nav2);
+  --background-image-bg-before-nav2: var(--bg-before-nav2);
+  --shadow-shadow-nav2: var(--shadow-nav2);
+  /* --------------------------------------------------------------------------------- */
+  /* ------------------------------mẫu 2 div------------------------------------------ */
+  --background-image-bg1-div: var(--bg1-div);
+ 
+  --color-bg4-div: var(--bg4-div);
+  --shadow-mau1-div: var(--shadow-mau1-div);
+  --color-bg2-div:var(--bg2-div);
+   --background-image-bg3-div: var(--bg3-div);
+
+  /* --------------------------------------------------------------------------------- */
+}
+
+
+/* animation keyfrám */
+@keyframes xoay {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  /* 1. Đặt chiều cao tối thiểu để bao trọn màn hình */
+  min-height: 100vh;
+  width: 100%;
+  color: white;
+  /* 2. Màu nền dự phòng (màu tối nhất ở cuối gradient) */
+  /* 3. Gradient ánh sáng */
+  background-image: radial-gradient(circle at 50% 0%, #014444, #001414 80%);
+  background-attachment: fixed;
+}
