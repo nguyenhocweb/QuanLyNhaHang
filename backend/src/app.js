@@ -10,6 +10,9 @@ import corsOptions from "./core/middlewares/cors.middlewares.js";
 
 import route from "./router/index.js";
 
+import { errorHandler } from "./core/middlewares/error.middleware.js";
+import { NotFoundError } from "./core/constants/error/index.js";
+
 const app= express();
 // --- 1. INIT MIDDLEWARES ---
 app.use(morgan("dev")); // 'dev' cho ngắn gọn, 'combined' cho production
@@ -27,7 +30,16 @@ app.use(express.urlencoded({ extended: true }));
 // router 
 app.use("/api",route);
 
+// --- 3. ERROR HANDLING (Xử lý lỗi) ---
 
+// Bước 1: Bắt lỗi 404 (Không tìm thấy route)
+app.use((req, res, next) => {
+    const error = new NotFoundError('Not Found Route');
+    next(error);
+});
+
+// Bước 2: Xử lý lỗi trung tâm (Về file error.middleware.js huyền thoại của chúng ta)
+app.use(errorHandler);
 
 
 export default app;
